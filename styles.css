@@ -142,3 +142,33 @@ h4{margin:1rem 0 .2rem;color:var(--b);text-transform:uppercase;font-size:.78rem;
 .cvbox{margin:1.4rem 0}.cvbox p{font-family:var(--mono);font-size:.85rem;color:var(--mut)}
 @media(max-width:860px){.const{height:auto;display:grid;gap:1.4rem}.cl{position:static;width:auto}.lines{display:none}}
 @media(max-width:760px){.menuscr,.prof,.roster{grid-template-columns:1fr}.menuscr{min-height:0}.avatar{max-width:200px}.biglink{flex-wrap:wrap}.mono.big{font-size:30vw}.tl::before{left:8px}.tl li,.tl li.r{width:auto;margin-left:30px}.dot,.tl li.r .dot{left:-33px;right:auto}button,a.btn{min-height:44px}}
+/* ===== v4: capas y profundidad (menús tipo JRPG / letras gigantes tipo arena) ===== */
+[hidden]{display:none!important}
+h1{text-shadow:2px 2px 0 var(--a),4px 4px 0 var(--a),6px 6px 0 var(--a),8px 8px 0 var(--a),10px 10px 0 var(--a),12px 12px 0 #000}
+h2{isolation:isolate;position:relative;background:none;box-shadow:none;color:var(--fg);padding:.05em .45em .05em .2em;font-size:clamp(2.6rem,9vw,5.5rem);line-height:.95;transform:skewX(-10deg) rotate(-2deg);text-shadow:1px 1px 0 var(--a),2px 2px 0 var(--a),3px 3px 0 var(--a),4px 4px 0 var(--a),5px 5px 0 var(--a),6px 6px 0 var(--a),7px 7px 0 var(--a),8px 8px 0 var(--a),11px 11px 0 #000}
+h2::before{content:attr(data-t);position:absolute;left:.2em;top:.05em;z-index:-1;color:transparent;-webkit-text-stroke:2px var(--b);transform:translate(-12px,-10px);padding:0;white-space:nowrap}
+h2::after{content:"";position:absolute;inset:.08em 0 .02em -.1em;z-index:-2;background:#07070c;border:3px solid var(--a);transform:skewX(-6deg) translate(12px,10px)}
+.back{margin-bottom:1.6rem}
+.mono span{text-shadow:2px 2px 0 var(--a),4px 4px 0 var(--a),6px 6px 0 var(--a),8px 8px 0 var(--a),10px 10px 0 var(--a),12px 12px 0 var(--a),14px 14px 0 var(--a),16px 16px 0 var(--a),28px 28px 0 #000}
+.menuscr h1{text-shadow:2px 2px 0 var(--a),4px 4px 0 var(--a),6px 6px 0 #000}
+.menuscr .id{translate:calc(var(--mx,0) * -16px) calc(var(--my,0) * -10px)}
+.menuscr .side{translate:calc(var(--mx,0) * 12px) calc(var(--my,0) * 8px)}
+.menu{max-width:none;gap:1.3rem}
+.menu li{animation:slam .5s calc(var(--n) * .08s) both}
+.menu li:nth-child(even){margin-left:2rem}
+@keyframes slam{from{opacity:0;transform:translateX(-120%) skewX(-20deg)}to{opacity:1;transform:none}}
+.menu button{position:relative;isolation:isolate;background:none;border:0;box-shadow:none;color:#fff;padding:.5rem 1.6rem .5rem 1.1rem;font:400 clamp(1.7rem,6vw,3rem)/1.05 var(--disp);text-transform:uppercase;letter-spacing:.03em;transform:skewX(-12deg) rotate(-1.5deg);transition:transform .18s cubic-bezier(.3,1.6,.5,1)}
+.menu button::before,.menu button::after{content:"";position:absolute;inset:0;z-index:-1;opacity:1;clip-path:polygon(0 6%,100% 0,96% 100%,2% 94%)}
+.menu button::before{background:#07070c}
+.menu button::after{background:var(--fg);z-index:-2;transform:translate(10px,9px)}
+.menu button:hover,.menu button:focus-visible{background:none;color:#07070c;transform:skewX(-12deg) rotate(-1.5deg) translateX(22px) scale(1.07)}
+.menu button:hover::before,.menu button:focus-visible::before{background:var(--a)}
+.menu button:hover::after,.menu button:focus-visible::after{transform:translate(18px,14px);background:var(--b)}
+.menu .lb{text-shadow:3px 3px 0 var(--a)}
+.menu button:hover .lb,.menu button:focus-visible .lb{text-shadow:3px 3px 0 var(--fg)}
+.menu b{font:700 .85rem var(--mono);-webkit-text-stroke:0;color:var(--b);margin-right:.7rem;vertical-align:top}
+.menu button:hover b,.menu button:focus-visible b{color:#07070c;-webkit-text-stroke:0}
+.screen::before{font-size:clamp(6rem,24vw,20rem);-webkit-text-stroke:3px var(--a);opacity:.3;translate:calc(var(--mx,0) * -40px) calc(var(--my,0) * -25px)}
+.screen::after{content:attr(data-w);position:fixed;left:-2vw;top:12vh;font:400 clamp(7rem,28vw,24rem)/1 var(--disp);text-transform:uppercase;color:var(--a);opacity:.08;z-index:-1;pointer-events:none;white-space:nowrap;transform:rotate(5deg);translate:calc(var(--mx,0) * 60px) calc(var(--my,0) * 35px)}
+.biglink:hover,.biglink:focus-visible{text-shadow:3px 3px 0 var(--fg),6px 6px 0 #07070c}
+@media(max-width:480px){.bar{position:fixed;left:0;justify-content:flex-end;background:#0a0a10e6}#stage{padding-top:4.8rem}.menu li:nth-child(even){margin-left:1rem}h2::before{left:.1em}}
