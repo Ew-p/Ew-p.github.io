@@ -1,12 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi CV Interactivo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edwin Cruz · Interactive CV</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Este es mi primer currículum interactivo.</p>
+<body data-screen="intro">
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="bar">
+  <button id="lang" type="button"></button>
+  <button id="snd" type="button" aria-pressed="false"></button>
+</header>
+<main id="stage" tabindex="-1"></main>
+<div id="cur" aria-hidden="true"></div>
+<script src="data/portfolio.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
