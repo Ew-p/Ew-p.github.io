@@ -2,22 +2,27 @@
 // a la lista correspondiente en AMBOS idiomas (es y en).
 window.PORTFOLIO = {
   name: "Edwin David Cruz Perez",
+  monogram: "EC", // editable: iniciales o símbolo
   cv: "cv.pdf",
   links: [
     { label: "GitHub", url: "https://github.com/Ew-p" },
     { label: "Email", url: "mailto:cruzpeedwin@gmail.com" }
   ],
   es: {
-    ui: { start: "Presiona inicio", skip: "Omitir", menu: "Menú principal", back: "← Menú", sound: "Sonido", switchLang: "Cambiar a inglés", cv: "Descargar CV (PDF)", pick: "Selecciona un proyecto", tech: "Tecnologías", links: "Enlaces", noLinks: "Enlaces próximamente.", external: "(abre en otra pestaña)" },
+    ui: { start: "Presiona inicio", skip: "Omitir", menu: "Menú principal", back: "← Menú", sound: "Sonido", switchLang: "Cambiar a inglés", cv: "Descargar CV (PDF)", pick: "Selecciona un proyecto", tech: "Tecnologías", links: "Enlaces", noLinks: "Enlaces próximamente.", external: "(abre en otra pestaña)", hint: "↑ ↓ mover · Enter elegir · Esc volver · o toca una opción", cvMissing: "Aún no se ha subido cv.pdf al sitio.", interests: "Intereses", solving: "Cómo resuelvo problemas", problem: "Problema", approach: "Enfoque", status: "Estado", equip: "Seleccionado" },
     tagline: "Ingeniería en Computación: ciencia de datos, IA y ciberseguridad",
     sections: { profile: "Perfil", projects: "Proyectos", skills: "Habilidades", education: "Formación y logros", contact: "Contacto" },
     profile: "Estudiante de séptimo semestre de Ingeniería en Computación con promedio de 9.0 y enfoque en ciencia de datos, inteligencia artificial y ciberseguridad. Experiencia en modelado de requerimientos, aplicaciones de escritorio con Java y JavaFX, clasificadores de visión por computadora y concursos de ciencia de datos. Con interés en contribuir al desarrollo de la industria tecnológica en México.",
     location: "Apizaco, Tlaxcala, México",
+    interests: ["Ciencia de datos", "Inteligencia artificial", "Ciberseguridad"],
+    solving: "[[Escribe aquí tu enfoque personal para resolver problemas]]",
+    certs: "[[Certificaciones, constancias y reconocimientos: por agregar]]",
+    moreContact: "[[Otros medios (LinkedIn, etc.): por agregar]]",
     projects: [
-      { name: "Tesis: análisis de amenazas (CTI) con MITRE ATT&CK", status: "En desarrollo · equipo", tech: ["LLM local", "MITRE ATT&CK", "STIX/JSON", "SIEM/SOAR"], desc: ["Pipeline con un LLM de código abierto ejecutado localmente que extrae técnicas y tácticas de reportes de incidentes en texto no estructurado y las mapea a MITRE ATT&CK.", "Salida estructurada en STIX/JSON, lista para integrarse a sistemas SIEM/SOAR."], links: [] },
-      { name: "Clasificadores de visión por computadora", status: "Python", tech: ["Python", "HSV", "MLP"], desc: ["Clasificador de imágenes (bosque y playa) con análisis de color HSV y perceptrón multicapa (MLP)."], links: [] },
-      { name: "Aplicaciones de uso local con Java y JavaFX", status: "Escritorio", tech: ["Java", "JavaFX", "PlantUML"], desc: ["Modelado de requerimientos y diseño con PlantUML; construcción de aplicaciones de escritorio de uso local."], links: [] },
-      { name: "Piper Studio: texto a voz", status: "Python", tech: ["Python", "Chatterbox Multilingual"], desc: ["Aplicación de escritorio de síntesis de voz con clonación zero-shot, biblioteca de voces de referencia con interfaz gráfica y salvaguardas éticas."], links: [] }
+      { name: "Tesis: análisis de amenazas (CTI) con MITRE ATT&CK", status: "En desarrollo · equipo", problem: "Los reportes de incidentes llegan como texto no estructurado y analizarlos a mano consume tiempo.", tech: ["LLM local", "MITRE ATT&CK", "STIX/JSON", "SIEM/SOAR"], desc: ["Pipeline con un LLM de código abierto ejecutado localmente que extrae técnicas y tácticas de reportes de incidentes en texto no estructurado y las mapea a MITRE ATT&CK.", "Salida estructurada en STIX/JSON, lista para integrarse a sistemas SIEM/SOAR."], links: [] },
+      { name: "Clasificadores de visión por computadora", status: "Python", problem: "Reconocer automáticamente escenas naturales (bosque o playa) a partir de sus características de color.", tech: ["Python", "HSV", "MLP"], desc: ["Clasificador de imágenes (bosque y playa) con análisis de color HSV y perceptrón multicapa (MLP)."], links: [] },
+      { name: "Aplicaciones de uso local con Java y JavaFX", status: "Escritorio", problem: "Construir aplicaciones de escritorio de uso local a partir de requerimientos bien modelados.", tech: ["Java", "JavaFX", "PlantUML"], desc: ["Modelado de requerimientos y diseño con PlantUML; construcción de aplicaciones de escritorio de uso local."], links: [] },
+      { name: "Piper Studio: texto a voz", status: "Python", problem: "Generar voz sintética a partir de voces de referencia, de forma controlada y con salvaguardas éticas.", tech: ["Python", "Chatterbox Multilingual"], desc: ["Aplicación de escritorio de síntesis de voz con clonación zero-shot, biblioteca de voces de referencia con interfaz gráfica y salvaguardas éticas."], links: [] }
     ],
     skills: [
       { g: "Lenguajes", i: ["Python", "MATLAB", "Java", "C", "C++"] },
@@ -33,16 +38,20 @@ window.PORTFOLIO = {
     ]
   },
   en: {
-    ui: { start: "Press start", skip: "Skip", menu: "Main menu", back: "← Menu", sound: "Sound", switchLang: "Switch to Spanish", cv: "Download CV (PDF)", pick: "Select a project", tech: "Technologies", links: "Links", noLinks: "Links coming soon.", external: "(opens in a new tab)" },
+    ui: { start: "Press start", skip: "Skip", menu: "Main menu", back: "← Menu", sound: "Sound", switchLang: "Switch to Spanish", cv: "Download CV (PDF)", pick: "Select a project", tech: "Technologies", links: "Links", noLinks: "Links coming soon.", external: "(opens in a new tab)", hint: "↑ ↓ move · Enter select · Esc back · or tap an option", cvMissing: "cv.pdf has not been uploaded to the site yet.", interests: "Interests", solving: "How I solve problems", problem: "Problem", approach: "Approach", status: "Status", equip: "Selected" },
     tagline: "Computer Engineering: data science, AI and cybersecurity",
     sections: { profile: "Profile", projects: "Projects", skills: "Skills", education: "Education & achievements", contact: "Contact" },
     profile: "Seventh-semester Computer Engineering student with a 9.0 GPA, focused on data science, artificial intelligence and cybersecurity. Experience in requirements modeling, Java/JavaFX desktop applications, computer vision classifiers and data science competitions. Interested in contributing to the growth of the technology industry in Mexico.",
     location: "Apizaco, Tlaxcala, Mexico",
+    interests: ["Data science", "Artificial intelligence", "Cybersecurity"],
+    solving: "[[Write your personal approach to problem-solving here]]",
+    certs: "[[Certifications, certificates and awards: to be added]]",
+    moreContact: "[[Other channels (LinkedIn, etc.): to be added]]",
     projects: [
-      { name: "Thesis: threat analysis (CTI) with MITRE ATT&CK", status: "In progress · team", tech: ["Local LLM", "MITRE ATT&CK", "STIX/JSON", "SIEM/SOAR"], desc: ["Pipeline using a locally run open-source LLM that extracts techniques and tactics from unstructured incident reports and maps them to MITRE ATT&CK.", "Structured STIX/JSON output, ready to plug into SIEM/SOAR systems."], links: [] },
-      { name: "Computer vision classifiers", status: "Python", tech: ["Python", "HSV", "MLP"], desc: ["Image classifier (forest vs. beach) using HSV color analysis and a multilayer perceptron (MLP)."], links: [] },
-      { name: "Local desktop apps with Java and JavaFX", status: "Desktop", tech: ["Java", "JavaFX", "PlantUML"], desc: ["Requirements modeling and design with PlantUML; building locally run desktop applications."], links: [] },
-      { name: "Piper Studio: text-to-speech", status: "Python", tech: ["Python", "Chatterbox Multilingual"], desc: ["Desktop speech synthesis app with zero-shot voice cloning, a GUI reference-voice library and ethical safeguards."], links: [] }
+      { name: "Thesis: threat analysis (CTI) with MITRE ATT&CK", status: "In progress · team", problem: "Incident reports arrive as unstructured text and analyzing them by hand takes time.", tech: ["Local LLM", "MITRE ATT&CK", "STIX/JSON", "SIEM/SOAR"], desc: ["Pipeline using a locally run open-source LLM that extracts techniques and tactics from unstructured incident reports and maps them to MITRE ATT&CK.", "Structured STIX/JSON output, ready to plug into SIEM/SOAR systems."], links: [] },
+      { name: "Computer vision classifiers", status: "Python", problem: "Automatically recognizing natural scenes (forest or beach) from their color features.", tech: ["Python", "HSV", "MLP"], desc: ["Image classifier (forest vs. beach) using HSV color analysis and a multilayer perceptron (MLP)."], links: [] },
+      { name: "Local desktop apps with Java and JavaFX", status: "Desktop", problem: "Building locally run desktop applications from well-modeled requirements.", tech: ["Java", "JavaFX", "PlantUML"], desc: ["Requirements modeling and design with PlantUML; building locally run desktop applications."], links: [] },
+      { name: "Piper Studio: text-to-speech", status: "Python", problem: "Generating synthetic speech from reference voices in a controlled way, with ethical safeguards.", tech: ["Python", "Chatterbox Multilingual"], desc: ["Desktop speech synthesis app with zero-shot voice cloning, a GUI reference-voice library and ethical safeguards."], links: [] }
     ],
     skills: [
       { g: "Languages", i: ["Python", "MATLAB", "Java", "C", "C++"] },
