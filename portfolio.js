@@ -8,8 +8,32 @@ window.PORTFOLIO = {
     { label: "GitHub", url: "https://github.com/Ew-p" },
     { label: "Email", url: "mailto:cruzpeedwin@gmail.com" }
   ],
+  // ===== CONSTANCIAS =====
+  // Cada constancia necesita su PDF y una imagen de vista previa (JPG) en la raíz del repo.
+  // Para agregar otra: quita los // del bloque de plantilla, cambia los datos y sube los 2 archivos.
+  certificates: [
+    {
+      file: "constancia-2024-microservicios.pdf", img: "constancia-2024-microservicios.jpg",
+      date: "2024-11-14", hours: 4,
+      es: { role: "Asistente", title: "Introducción a la arquitectura de microservicios: Spring Boot + PL/SQL + Feign + Docker", issuer: "UATx · Seminario de Ingeniería en Computación 2024" },
+      en: { role: "Attendee", title: "Introduction to microservices architecture: Spring Boot + PL/SQL + Feign + Docker", issuer: "UATx · Computer Engineering Seminar 2024" }
+    },
+    {
+      file: "constancia-2023-huawei-cloud.pdf", img: "constancia-2023-huawei-cloud.jpg",
+      date: "2023-11-14", hours: 4,
+      es: { role: "Participante", title: "Infraestructura y funciones informáticas Huawei Cloud Developer", issuer: "UATx · Seminario de Ingeniería en Computación 2023" },
+      en: { role: "Participant", title: "Huawei Cloud Developer: infrastructure and IT functions", issuer: "UATx · Computer Engineering Seminar 2023" }
+    },
+    // ---- PLANTILLA: descomenta y completa para agregar una constancia nueva ----
+    // {
+    //   file: "constancia-AAAA-nombre.pdf", img: "constancia-AAAA-nombre.jpg",
+    //   date: "AAAA-MM-DD", hours: 0,
+    //   es: { role: "Participante", title: "Título en español", issuer: "Institución · Evento" },
+    //   en: { role: "Participant", title: "Title in English", issuer: "Institution · Event" }
+    // },
+  ],
   es: {
-    ui: { start: "Presiona inicio", skip: "Omitir", menu: "Menú principal", back: "← Menú", sound: "Sonido", switchLang: "Cambiar a inglés", cv: "Descargar CV (PDF)", pick: "Selecciona un proyecto", tech: "Tecnologías", links: "Enlaces", noLinks: "Enlaces próximamente.", external: "(abre en otra pestaña)", hint: "↑ ↓ mover · Enter elegir · Esc volver · o toca una opción", cvMissing: "Aún no se ha subido cv.pdf al sitio.", interests: "Intereses", solving: "Cómo resuelvo problemas", problem: "Problema", approach: "Enfoque", status: "Estado", equip: "Seleccionado", home: "Inicio" },
+    ui: { start: "Presiona inicio", skip: "Omitir", menu: "Menú principal", back: "← Menú", sound: "Sonido", switchLang: "Cambiar a inglés", cv: "Descargar CV (PDF)", pick: "Selecciona un proyecto", tech: "Tecnologías", links: "Enlaces", noLinks: "Enlaces próximamente.", external: "(abre en otra pestaña)", hint: "↑ ↓ mover · Enter elegir · Esc volver · o toca una opción", cvMissing: "Aún no se ha subido cv.pdf al sitio.", interests: "Intereses", solving: "Cómo resuelvo problemas", problem: "Problema", approach: "Enfoque", status: "Estado", equip: "Seleccionado", home: "Inicio", certs: "Constancias", openPdf: "Abrir PDF", certAlt: "Vista previa de la constancia" },
     tagline: "Ingeniería en Computación: ciencia de datos, IA y ciberseguridad",
     sections: { profile: "Perfil", projects: "Proyectos", skills: "Habilidades", education: "Formación y logros", contact: "Contacto" },
     profile: "Estudiante de séptimo semestre de Ingeniería en Computación con promedio de 9.0 y enfoque en ciencia de datos, inteligencia artificial y ciberseguridad. Experiencia en modelado de requerimientos, aplicaciones de escritorio con Java y JavaFX, clasificadores de visión por computadora y concursos de ciencia de datos. Con interés en contribuir al desarrollo de la industria tecnológica en México.",
@@ -38,7 +62,7 @@ window.PORTFOLIO = {
     ]
   },
   en: {
-    ui: { start: "Press start", skip: "Skip", menu: "Main menu", back: "← Menu", sound: "Sound", switchLang: "Switch to Spanish", cv: "Download CV (PDF)", pick: "Select a project", tech: "Technologies", links: "Links", noLinks: "Links coming soon.", external: "(opens in a new tab)", hint: "↑ ↓ move · Enter select · Esc back · or tap an option", cvMissing: "cv.pdf has not been uploaded to the site yet.", interests: "Interests", solving: "How I solve problems", problem: "Problem", approach: "Approach", status: "Status", equip: "Selected", home: "Home" },
+    ui: { start: "Press start", skip: "Skip", menu: "Main menu", back: "← Menu", sound: "Sound", switchLang: "Switch to Spanish", cv: "Download CV (PDF)", pick: "Select a project", tech: "Technologies", links: "Links", noLinks: "Links coming soon.", external: "(opens in a new tab)", hint: "↑ ↓ move · Enter select · Esc back · or tap an option", cvMissing: "cv.pdf has not been uploaded to the site yet.", interests: "Interests", solving: "How I solve problems", problem: "Problem", approach: "Approach", status: "Status", equip: "Selected", home: "Home", certs: "Certificates", openPdf: "Open PDF", certAlt: "Preview of certificate" },
     tagline: "Computer Engineering: data science, AI and cybersecurity",
     sections: { profile: "Profile", projects: "Projects", skills: "Skills", education: "Education & achievements", contact: "Contact" },
     profile: "Seventh-semester Computer Engineering student with a 9.0 GPA, focused on data science, artificial intelligence and cybersecurity. Experience in requirements modeling, Java/JavaFX desktop applications, computer vision classifiers and data science competitions. Interested in contributing to the growth of the technology industry in Mexico.",
