@@ -104,8 +104,10 @@
     education() {
       const t = T(), c = el('ol', 'tl');
       t.education.forEach((e, i) => c.append(el('li', i % 2 ? 'r' : '', `<span class="dot"></span><h3>${esc(e.h)}</h3><p class="tag">${esc(e.s)}</p>${list(e.p)}`)));
-      c.append(el('li', 'r', `<span class="dot"></span><p>${ph(t.certs)}</p>`));
-      return wrap('education', c);
+      const cs = el('div', 'certs'), fmt = new Intl.DateTimeFormat(lang, { dateStyle: 'long' }), box = el('div');
+      cs.innerHTML = `<h3>${esc(t.ui.certs)}</h3><div class="grid">${P.certificates.map(k => { const x = k[lang], [y, m, dd] = k.date.split('-'); return `<article class="cert"><a href="${esc(k.file)}" target="_blank" rel="noopener" aria-label="${esc(t.ui.openPdf)}: ${esc(x.title)}"><img src="${esc(k.img)}" alt="${esc(t.ui.certAlt)}: ${esc(x.title)}" loading="lazy"></a><h4>${esc(x.role)}</h4><p><strong>${esc(x.title)}</strong></p><p class="tag">${esc(x.issuer)} · ${esc(fmt.format(new Date(y, m - 1, dd)))} · ${k.hours} h</p></article>`; }).join('')}</div>`;
+      box.append(c, cs);
+      return wrap('education', box);
     },
     contact() {
       const t = T(), c = el('div', 'big-links');
