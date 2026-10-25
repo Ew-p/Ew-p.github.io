@@ -172,3 +172,12 @@ h2::after{content:"";position:absolute;inset:.08em 0 .02em -.1em;z-index:-2;back
 .screen::after{content:attr(data-w);position:fixed;left:-2vw;top:12vh;font:400 clamp(7rem,28vw,24rem)/1 var(--disp);text-transform:uppercase;color:var(--a);opacity:.08;z-index:-1;pointer-events:none;white-space:nowrap;transform:rotate(5deg);translate:calc(var(--mx,0) * 60px) calc(var(--my,0) * 35px)}
 .biglink:hover,.biglink:focus-visible{text-shadow:3px 3px 0 var(--fg),6px 6px 0 #07070c}
 @media(max-width:480px){.bar{position:fixed;left:0;justify-content:flex-end;background:#0a0a10e6}#stage{padding-top:4.8rem}.menu li:nth-child(even){margin-left:1rem}h2::before{left:.1em}}
+/* ===== constancias ===== */
+.certs{margin-top:2.5rem}
+.certs .grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.cert{background:#14141fee;border:3px solid var(--fg);box-shadow:8px 8px 0 var(--b);padding:.8rem;transition:transform .2s}
+.cert:nth-child(odd){rotate:-1.2deg}.cert:nth-child(even){rotate:1deg}
+.cert:hover{transform:translateY(-6px) scale(1.02)}
+.cert img{display:block;width:100%;height:auto;border:2px solid var(--a);background:#fff}
+.cert a:focus-visible{outline:3px solid var(--b);outline-offset:3px;display:block}
+.cert p{margin:.3rem 0}
